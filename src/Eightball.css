@@ -1,0 +1,19 @@
+.Eightball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    cursor: pointer;
+}
+
+.Reset {
+    margin: 5%;
+    padding: 15px;
+    background-color: gray;
+    border-color: black;
+    border-radius: 20%;
+    cursor: pointer;
+
+}
