@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import DogList from './DogList'
 import GetDogDetails from './GetDogDetials'
-import DogDetails from './DogDetails'
 import Navbar from './Navbar'
 import './App.css'
 
@@ -59,7 +58,7 @@ function App() {
         <Routes>
           <Route path='/dogs' element={<DogList dogs={dogs} />} />
           <Route path='/dogs/:name' element={<GetDogDetails dogs={dogs} />} />
-          <Route path='/*' element={<Navigate to='/dogs' />} />
+          <Route path='*' element={<Navigate to={'/dogs'} />} />
         </Routes>
       </BrowserRouter>
     </>
