@@ -7,7 +7,7 @@ const DogList = ({ dogs }) => {
             <h1>Check Out Our Dogs!!!</h1>
             {dogs.map(d => (
                 <div key={d.name}>
-                    <img src={`../public/${d.name.toLowerCase()}.jpg`} alt={d.name} />
+                    <img src={`/${d.name.toLowerCase()}.jpg`} alt={d.name} />
                     <h2><Link to={`/dogs/${d.name.toLowerCase()}`}>{d.name}</Link></h2>
                 </div>
             ))}

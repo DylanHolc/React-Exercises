@@ -10,7 +10,7 @@ const dogs = [
   {
     name: "Whiskey",
     age: 5,
-    src: '../public/whiskey.jpg',
+    src: '/whiskey.jpg',
     facts: [
       "Whiskey loves eating popcorn.",
       "Whiskey is a terrible guard dog.",
@@ -20,7 +20,7 @@ const dogs = [
   {
     name: "Duke",
     age: 3,
-    src: '../public/duke.jpg',
+    src: '/duke.jpg',
     facts: [
       "Duke believes that ball is life.",
       "Duke likes snow.",
@@ -30,7 +30,7 @@ const dogs = [
   {
     name: "Perry",
     age: 4,
-    src: '../public/perry.jpg',
+    src: '/perry.jpg',
     facts: [
       "Perry loves all humans.",
       "Perry demolishes all snacks.",
@@ -40,7 +40,7 @@ const dogs = [
   {
     name: "Tubby",
     age: 4,
-    src: '../public/tubby.jpg',
+    src: '/tubby.jpg',
     facts: [
       "Tubby is really stupid.",
       "Tubby does not like walks.",
@@ -55,6 +55,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar dogs={dogs} />
         <Routes>
           <Route path='/dogs' element={<DogList dogs={dogs} />} />
           <Route path='/dogs/:name' element={<GetDogDetails dogs={dogs} />} />

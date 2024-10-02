@@ -1,9 +1,26 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ dogs }) => {
+
+    const links = dogs.map(dog => (
+        <NavLink
+            key={dog.name}
+            to={`/dogs/${dog.name.toLowerCase()}`}
+        >
+            {dog.name}
+        </NavLink>
+    ));
+
     return (
-        <div></div>
-    )
+        <nav>
+            <NavLink to="/dogs" end>
+                Home
+            </NavLink>
+            {links}
+        </nav>
+    );
+
 }
 
 export default Navbar;
